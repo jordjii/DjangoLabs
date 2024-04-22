@@ -9,6 +9,7 @@ from django.http import HttpRequest
 from .forms import PollForm 
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+
 from django.db import models
 from .models import Blog
 
@@ -115,7 +116,8 @@ def registration(request):
      )
     
 def blog(request):
-    posts = Blog. objects.all()
+    posts = Blog.objects.all()
+    
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -138,7 +140,7 @@ def blogpost(request, parametr):
             'post_1': post_1, # передача конкретной статьи в шаблон веб-страницы
             'year':datetime.now().year,
         }
-)
+    )
 
 def newpost(request):
     assert isinstance(request, HttpRequest)
