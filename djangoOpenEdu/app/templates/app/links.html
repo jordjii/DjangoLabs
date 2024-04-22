@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<head>
+    <title>Ссылки</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <ul>
+        <p><li><a href="https://google.ru">google.ru</a></li> - Поисковая система гугл</p>
+        <p><li><a href="https://ya.ru" target="_blank"> <img src="{% static 'app/content/yandex.ico' %}" alt="Logo 1" /></a></li> - Поисковая система яндекс</p>
+    </ul>
+    <p><a href="about.html">Вернуться к нашей команде</p>
+</body>
+
+
+{% endblock %}

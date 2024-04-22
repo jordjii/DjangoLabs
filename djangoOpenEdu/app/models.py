@@ -1,0 +1,17 @@
+"""
+Definition of models.
+"""
+
+from os import name
+from unittest.util import _MAX_LENGTH
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+# Create your models here.
+
+# class User(AbstractUser):
+#    city = models.charfield(_MAX_LENGTH=50)
+#    email = models.charfield(_MAX_LENGTH=100)
+#    name = models.charfield(_MAX_LENGTH=50)
+    
+    
