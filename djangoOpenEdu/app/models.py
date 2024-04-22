@@ -1,17 +1,39 @@
-"""
+﻿"""
 Definition of models.
 """
 
-from os import name
-from unittest.util import _MAX_LENGTH
+
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from datetime import datetime
+from django.contrib import admin
+from django.urls import reverse
 
-# Create your models here.
+class Blog(models.Model):
+    title = models.CharField(max_length=100, )
 
-# class User(AbstractUser):
-#    city = models.charfield(_MAX_LENGTH=50)
-#    email = models.charfield(_MAX_LENGTH=100)
-#    name = models.charfield(_MAX_LENGTH=50)
+
+class Blog(models.Model):
+    title = models.CharField(max_length = 100, unique_for_date = "posted", verbose_name = "Заголовок")     
+    description = models.TextField(verbose_name = "Краткое содержание")    
+    content = models.TextField(verbose_name = "Полное содержание")
+    posted = models.DateTimeField(default = datetime.now(), db_index = True, verbose_name = "Опубликована")
+    image = models.FileField(default = 'temp.jpg', verbose_name = "Путь к картинке")
+    
+    # Методы класса:
+
+    def get_absolute_url(self):
+        return reverse("blogpost", args=[str(self.id)])
+
+    def __str__(self): # метод возврацает название, используемое для представления отдельных записей в административном разделе
+        return self.title
+    
+    # Метаданные - вложенный класс, который задает дополнительные параметры модели:
+    class Meta:
+        db_table = "Posts" # иня таблицы для модели
+        ordering = ["-posted"] # в порядок сортировки данных в модели ("-" означает по убыванию) verbose_name = "статья блога"
+        verbose_name = "статья блога" 
+        verbose_name_plural = "статья блога" 
+        
+admin.site.register(Blog)
     
     
