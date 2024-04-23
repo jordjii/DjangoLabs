@@ -13,6 +13,10 @@ from django.shortcuts import render, redirect
 from django.db import models
 from .models import Blog
 
+from .models import Comment
+from .forms import CommentForm
+
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
@@ -133,11 +137,31 @@ def blog(request):
 def blogpost(request, parametr):
     assert isinstance(request, HttpRequest)
     post_1 = Blog.objects.get(id=parametr) # запрос на выбор конкретной статьи по параметру
+
+    comments = Comment.objects.filter(post=parametr)
+    
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment_f = form.save(commit=False)
+            comment_f.author = request.user
+            comment_f.date = datetime.now()
+            comment_f.post = Blog.objects.get(id=parametr)
+            comment_f.save()
+            return redirect('blogpost', parametr=post_1.id)
+    else:
+         form = CommentForm()
+
+
     return render(
         request,
         'app/blogpost.html',
         {
             'post_1': post_1, # передача конкретной статьи в шаблон веб-страницы
+            
+            'comments': comments,
+            'form': form,
+            
             'year':datetime.now().year,
         }
     )
@@ -166,3 +190,6 @@ def newpost(request):
             'year':datetime.now().year,
         }
     )
+
+def videopost(request):
+    return HttpResponse("This is the video post view")
