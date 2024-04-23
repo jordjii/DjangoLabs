@@ -1,13 +1,13 @@
-{% extends "app/layout.html" %}
+п»ї{% extends "app/layout.html" %}
 {% block content %}
 
-    <h3>Добавить статью</h3>
-    <form method="POST" enctype="multipart/form-data">
-    {% csrf_token %} 
+<h3>Р”РѕР±Р°РІРёС‚СЊ СЃС‚Р°С‚СЊСЋ</h3>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
     <div>
-        {{ blog form.as_p }}
-        <button type="submit" class="save btn btn-default"> Cоxранить статью </button>
+        {{ blogform.as_p }}
+        <button type="submit" class="save btn btn-default"> CРѕxСЂР°РЅРёС‚СЊ СЃС‚Р°С‚СЊСЋ </button>
     </div>
-    </form>
+</form>
 
 {% endblock %}

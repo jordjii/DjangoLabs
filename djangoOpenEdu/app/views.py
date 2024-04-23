@@ -15,6 +15,7 @@ from .models import Blog
 
 from .models import Comment
 from .forms import CommentForm
+from .forms import BlogForm
 
 
 def home(request):
@@ -186,8 +187,7 @@ def newpost(request):
         {
             'blogform': blogform,
             'title': 'Добавить статью блога',
-            
-            'year':datetime.now().year,
+            'year': datetime.now().year,
         }
     )
 
