@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\githubRepositories\\DjangoLabs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|solutionrelative:djangoOpenEdu\\app\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\blogpost.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|solutionrelative:djangoOpenEdu\\app\\templates\\app\\blogpost.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\newpost.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|solutionrelative:djangoOpenEdu\\app\\templates\\app\\newpost.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|solutionrelative:djangoOpenEdu\\app\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\djangoOpenEdu\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|solutionrelative:djangoOpenEdu\\djangoOpenEdu\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\blog.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|solutionrelative:djangoOpenEdu\\app\\templates\\app\\blog.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D9CB5C75-776A-4CBE-927F-8F1C9A8E51CD}|djangoOpenEdu\\djangoOpenEdu.pyproj|solutionrelative:djangoOpenEdu\\app\\templates\\app\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,67 +46,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "models.py",
-              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\models.py",
-              "RelativeDocumentMoniker": "djangoOpenEdu\\app\\models.py",
-              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\models.py",
-              "RelativeToolTip": "djangoOpenEdu\\app\\models.py",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-04-22T17:39:39.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "layout.html",
-              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\layout.html",
-              "RelativeDocumentMoniker": "djangoOpenEdu\\app\\templates\\app\\layout.html",
-              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\layout.html",
-              "RelativeToolTip": "djangoOpenEdu\\app\\templates\\app\\layout.html",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-22T17:34:31.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "blog.html",
-              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\blog.html",
-              "RelativeDocumentMoniker": "djangoOpenEdu\\app\\templates\\app\\blog.html",
-              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\blog.html",
-              "RelativeToolTip": "djangoOpenEdu\\app\\templates\\app\\blog.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-04-22T17:33:47.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "views.py",
-              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\views.py",
-              "RelativeDocumentMoniker": "djangoOpenEdu\\app\\views.py",
-              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\views.py",
-              "RelativeToolTip": "djangoOpenEdu\\app\\views.py",
-              "ViewState": "AQIAAG4AAAAAAAAAAADgv3kAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-04-22T17:32:46.733Z",
+              "Title": "blogpost.html",
+              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\blogpost.html",
+              "RelativeDocumentMoniker": "djangoOpenEdu\\app\\templates\\app\\blogpost.html",
+              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\blogpost.html",
+              "RelativeToolTip": "djangoOpenEdu\\app\\templates\\app\\blogpost.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-04-23T15:22:36.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "newpost.html",
+              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\newpost.html",
+              "RelativeDocumentMoniker": "djangoOpenEdu\\app\\templates\\app\\newpost.html",
+              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\templates\\app\\newpost.html",
+              "RelativeToolTip": "djangoOpenEdu\\app\\templates\\app\\newpost.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-04-23T15:22:32.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "urls.py",
-              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\djangoOpenEdu\\urls.py",
-              "RelativeDocumentMoniker": "djangoOpenEdu\\djangoOpenEdu\\urls.py",
-              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\djangoOpenEdu\\urls.py",
-              "RelativeToolTip": "djangoOpenEdu\\djangoOpenEdu\\urls.py",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "models.py",
+              "DocumentMoniker": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\models.py",
+              "RelativeDocumentMoniker": "djangoOpenEdu\\app\\models.py",
+              "ToolTip": "D:\\githubRepositories\\DjangoLabs\\djangoOpenEdu\\app\\models.py",
+              "RelativeToolTip": "djangoOpenEdu\\app\\models.py",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACkAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-04-22T17:32:20.863Z",
+              "WhenOpened": "2024-04-23T15:18:29.738Z",
               "EditorCaption": ""
             }
           ]

@@ -192,4 +192,14 @@ def newpost(request):
     )
 
 def videopost(request):
-    return HttpResponse("This is the video post view")
+    """Renders the videopost page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/videopost.html',
+        {
+            'title': 'Видео пост',
+            'message': 'Описание вашего видео поста.',
+            'year': datetime.now().year,
+        }
+    )
