@@ -13,6 +13,7 @@ from django.shortcuts import render, redirect
 from django.db import models
 from .models import Blog
 
+
 from .models import Comment
 from .forms import CommentForm
 from .forms import BlogForm
@@ -51,7 +52,7 @@ def about(request):
         'app/about.html',
         {
             'title':'О нас',
-            'message':'Ваше описание приложения.',
+            'message':'Ваше описание приложения',
             'year':datetime.now().year,
         }
     )
@@ -122,14 +123,17 @@ def registration(request):
     
 def blog(request):
     posts = Blog.objects.all()
-    
+   
+
     assert isinstance(request, HttpRequest)
+
     return render(
         request,
         "app/blog.html",
         {
-            'title':'Блог',
+            'title': 'Блог',
             'posts': posts,
+
             'year': datetime.now().year,
         }
     )
@@ -190,6 +194,7 @@ def newpost(request):
             'year': datetime.now().year,
         }
     )
+
 
 def videopost(request):
     """Renders the videopost page."""

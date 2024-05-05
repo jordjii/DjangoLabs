@@ -9,12 +9,17 @@ from django.contrib import admin
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+
 class Blog(models.Model):
-    title = models.CharField(max_length = 100, unique_for_date = "posted", verbose_name = "Заголовок")     
-    description = models.TextField(verbose_name = "Краткое содержание")    
-    content = models.TextField(verbose_name = "Полное содержание")
-    posted = models.DateTimeField(default = datetime.now(), db_index = True, verbose_name = "Опубликована")
-    image = models.FileField(default = 'temp.jpg', verbose_name = "Путь к картинке")
+    title = models.CharField(max_length=100, unique_for_date="posted", verbose_name="Заголовок")
+    description = models.TextField(verbose_name="Краткое содержание")
+    content = models.TextField(verbose_name="Полное содержание")
+    posted = models.DateTimeField(default=datetime.now, db_index=True, verbose_name="Опубликована")
+    image = models.FileField(default='temp.jpg', verbose_name="Путь к картинке")
+    
+
+    def __str__(self):
+        return self.title
     
     # Методы класса:
 

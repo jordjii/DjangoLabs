@@ -2,23 +2,76 @@
 {% block content %}
 {% if form != None %}
 
-<br>
-<h2> Отправьте, пожалуйста, заполненную анкету </h2>
-<br>
-<div>
-    <form method="post">
-        {% csrf_token %}
-        <label for="{{form.name.id_for_label}}">{{form.name.label}}:</label>
-        {{form.name}}<br><br>
-        <label for="{{form.city.id_for_label}}">{{form.city.label}}:</label>
-        {{form.city}}<br>
-        <label for="{{form.email.id_for_label}}">{{form.email.label}}:</label>
-        {{form.email}}<br><br>
-        <label for="{{form.notice.id_for_label}}">{{form.notice.label}}:</label>
-        {{form.notice}}<br><br>
-        <input type="submit" value="Отправить">
-    </form>
+<style>
+    .submit-button-poll {
+        background-color: #FFF; /* Цвет фона кнопки */
+        color: #333; /* Цвет текста на кнопке */
+        padding: 10px 20px; /* Поля внутри кнопки */
+        border: none; /* Убираем границу */
+        cursor: pointer; /* Изменяем вид курсора */
+    }
+    
+    .submit-button-poll:hover {
+        background-color: #FFA07A; /* Новый цвет фона при наведении */
+    }
+
+    .submit-button-poll:focus {
+        background-color: #FA8072; /* Новый цвет фона при фокусе */
+    }
+
+     label {
+        display: block; /* Размещаем label на новой строке */
+        font-size: 16px; /* Размер шрифта */
+        color: #333; /* Цвет текста */
+        margin-bottom: 5px; /* Отступ снизу */
+    }
+
+    /* Стили для полей ввода */
+    input[type="text"] {
+        padding: 5px; /* Внутренние отступы */
+        width: 100%; /* Ширина поля ввода */
+        border: 1px solid #999; /* Граница поля ввода */
+        border-radius: 5px; /* Скругление углов */
+    }
+
+
+
+
+</style>
+<div >
+    <br>
+    <h2>Отправьте, пожалуйста, заполненную анкету</h2>
+    <br>
+    <div >
+        <form method="post">
+            {% csrf_token %}
+            <label for="{{form.name.id_for_label}}">{{form.name.label}}:</label>
+            {{form.name}}<br><br>
+            <label for="{{form.city.id_for_label}}">{{form.city.label}}:</label>
+            {{form.city}}<br><br>
+            <label for="{{form.email.id_for_label}}">{{form.email.label}}:</label>
+            {{form.email}}<br><br>
+            <label for="{{form.notice.id_for_label}}">{{form.notice.label}}:</label>
+            {{form.notice}}<br><br>
+            <input class="submit-button-poll" type="submit" value="Отправить">
+        </form>
+    </div>
 </div>
+<script>
+    const submitButton = document.querySelector('.submit-button-poll');
+
+    // Изменение цвета текста на кнопке при наведении мыши
+    submitButton.addEventListener('mouseenter', function () {
+        this.style.color = '#EDEBEB'; // Изменение цвета текста при наведении
+        this.style.backgroundColor = '#000'; // Изменение цвета текста при наведении
+    });
+
+    submitButton.addEventListener('mouseleave', function () {
+        this.style.color = '#000'; // Возвращение исходного цвета текста при уходе курсора
+        this.style.backgroundColor = '#fff'; // Возвращение исходного цвета текста при уходе курсора
+    });
+</script>
+
 {% else %}
 <br>
 <h2>Благодарим за предоставленную информацию!</h2>
@@ -28,11 +81,9 @@
     <li><span>Город:</span>{{ data.city }}</li>
     <li><span>E-mail:</span>{{ data.email }}</li>
     <li>
-        <span>Получить новости сайта на e-mail::</span>
+        <span>Получить новости сайта на e-mail:</span>
         {{ data.notice }}
     </li>
-
 </ul>
-
 {% endif %}
 {% endblock %}
