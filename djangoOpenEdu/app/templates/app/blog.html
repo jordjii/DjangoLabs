@@ -18,7 +18,7 @@
 
 
         <p> {{ post.description }} </p>
-        <p><a href="{% url 'blogpost' parametr=post.id %}">ЧИТАТЬ ДАЛЕЕ!!!</a></p>
+        <p><a class="btn btn-default" href="{% url 'blogpost' parametr=post.id %}">ЧИТАТЬ</a></p>
     </div>
 </div>
 {% endfor %}
