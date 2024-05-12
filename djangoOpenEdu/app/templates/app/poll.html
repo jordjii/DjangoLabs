@@ -4,16 +4,15 @@
 
 <style>
     .submit-button-poll {
-        background-color: #FFF; /* Цвет фона кнопки */
-        color: #333; /* Цвет текста на кнопке */
         padding: 10px 20px; /* Поля внутри кнопки */
         border: none; /* Убираем границу */
         cursor: pointer; /* Изменяем вид курсора */
+        background-color: rgb(255, 105, 0); /* Цвет фона кнопки */
+        color: white; /* Цвет текста на кнопке */
+        font-weight: bold;
+        border-radius: 4px;
     }
     
-    .submit-button-poll:hover {
-        background-color: #FFA07A; /* Новый цвет фона при наведении */
-    }
 
     .submit-button-poll:focus {
         background-color: #FA8072; /* Новый цвет фона при фокусе */
@@ -24,6 +23,7 @@
         font-size: 16px; /* Размер шрифта */
         color: #333; /* Цвет текста */
         margin-bottom: 5px; /* Отступ снизу */
+
     }
 
     /* Стили для полей ввода */
@@ -32,17 +32,64 @@
         width: 100%; /* Ширина поля ввода */
         border: 1px solid #999; /* Граница поля ввода */
         border-radius: 5px; /* Скругление углов */
+        background-color: white;
     }
-
-
-
+    .offer {
+        width: 300px; /* Измените значение на необходимое вам */
+    }
+    input[name="offer"] {
+        width: 500px; /* Измените значение на необходимое вам */
+        height: 500px;
+    }
+    .shareLabel {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
 
 </style>
-<div >
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const button = document.querySelector('.submit-button-poll');
+
+        // Добавить обработчики событий для наведения курсора и ухода от кнопки
+        button.addEventListener('mouseover', function () {
+            button.style.backgroundColor = 'white'; // Изменить цвет фона при наведении на кнопку
+            button.style.color = 'black'
+        });
+
+        button.addEventListener('mouseout', function () {
+            button.style.backgroundColor = '#FF6900'; // Вернуть исходный цвет кнопки при уходе курсора
+            button.style.color = 'white'
+        });
+
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const textInputs = document.querySelectorAll('input[type="text"]');
+
+        // Добавить обработчики событий для каждого поля ввода
+        textInputs.forEach(input => {
+            input.addEventListener('focus', function () {
+                this.style.backgroundColor = '#FF6900'; // Изменить цвет фона поля ввода при фокусировке
+                this.style.color = 'white';
+            });
+
+            input.addEventListener('blur', function () {
+                this.style.backgroundColor = 'white'; // Вернуть исходный цвет фона поля ввода при потере фокуса
+                this.style.color = 'black';
+            });
+        });
+    });
+</script>
+
+
+<div>
     <br>
-    <h2>Отправьте, пожалуйста, заполненную анкету</h2>
+    <h2 class="shareLabel">Поделитесь с нами с вашим самым секретным рецептом!</h2>
     <br>
-    <div >
+    <div>
         <form method="post">
             {% csrf_token %}
             <label for="{{form.name.id_for_label}}">{{form.name.label}}:</label>
@@ -51,26 +98,17 @@
             {{form.city}}<br><br>
             <label for="{{form.email.id_for_label}}">{{form.email.label}}:</label>
             {{form.email}}<br><br>
-            <label for="{{form.notice.id_for_label}}">{{form.notice.label}}:</label>
+
+            <label class="offer" for="{{form.offer.id_for_label}}">{{form.offer.label}}</label>
+            {{form.offer}}<br><br>
+
+            <label for="{{form.notice.id_for_label}}">{{form.notice.label}}</label>
             {{form.notice}}<br><br>
-            <input class="submit-button-poll" type="submit" value="Отправить">
+            <input class="submit-button-poll" type="submit" id="commitID1" value="Отправить">
         </form>
     </div>
 </div>
-<script>
-    const submitButton = document.querySelector('.submit-button-poll');
 
-    // Изменение цвета текста на кнопке при наведении мыши
-    submitButton.addEventListener('mouseenter', function () {
-        this.style.color = '#EDEBEB'; // Изменение цвета текста при наведении
-        this.style.backgroundColor = '#000'; // Изменение цвета текста при наведении
-    });
-
-    submitButton.addEventListener('mouseleave', function () {
-        this.style.color = '#000'; // Возвращение исходного цвета текста при уходе курсора
-        this.style.backgroundColor = '#fff'; // Возвращение исходного цвета текста при уходе курсора
-    });
-</script>
 
 {% else %}
 <br>
@@ -85,5 +123,7 @@
         {{ data.notice }}
     </li>
 </ul>
+
+
 {% endif %}
 {% endblock %}

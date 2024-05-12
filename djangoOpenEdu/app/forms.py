@@ -27,8 +27,10 @@ class PollForm (forms.Form):
     name = forms.CharField(label='Ваше имя', min_length=2, max_length=100)
     city = forms.CharField(label='Ваш город', min_length=2, max_length=100)
     email = forms.CharField(label='Ваш email', min_length=7)
+    offer = forms.CharField(label='Какой рецепт вы бы хотели предложить?', min_length=2, max_length=10000)
     notice = forms.BooleanField(label='Получать новости сайта?', required=False)
     
+
 class CommentForm (forms.ModelForm):
 
     class Meta:
