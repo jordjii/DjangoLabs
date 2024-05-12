@@ -1,12 +1,12 @@
 ﻿{% extends "app/layout.html" %}
 {% block content %}
 
-<h2> {{post_1.title}} </h2>
+<h2> {{post_1.title}} </h2> <br />
 {% if post_1.image and post_1.image.url != '/media/temp.jpg' %}
-<img src="{{ post_1.image.url }}" alt=" Картинка статьи блога" width="200" />
+<img src="{{ post_1.image.url }}" alt=" Картинка статьи блога" width="1000" /> <br /> <br />
 {% endif %}
 <p> {{post_1.content|linebreaksbr}} </p>
-<p><a href="{% url 'blog' %}">НАЗАД</a></p>
+
 
 {% if user.is_authenticated %}
 <h3>Добавить комментарий</h3>
@@ -31,5 +31,5 @@
 {% endfor %}
 
 <hr />
-<p><a href="{% url 'blog' %}"> НАЗАД </a> </p>
+<p><a class="btn btn-default" href="{% url 'blog' %}"> НАЗАД </a> </p>
 {% endblock %}
